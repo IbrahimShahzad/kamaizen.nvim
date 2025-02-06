@@ -32,7 +32,10 @@ M.setup = function(opts)
     callback = function()
       ----------------------------------------
       local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
-      if not parser_config['kamailio'] then
+      local parsers = require 'nvim-treesitter.parsers'
+
+      -- if not parser_config["kamailio"] then
+      if not parsers.has_parser 'kamailio' then
         parser_config['kamailio'] = {
           install_info = {
             -- url = 'https://github.com/IbrahimShahzad/tree-sitter-kamailio-cfg',
