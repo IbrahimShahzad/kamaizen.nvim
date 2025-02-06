@@ -1,4 +1,4 @@
-# KamaiZen-nvim
+# kamaizen-nvim
 
 Neovim plugin to integrate the [KamaiZen Language Server](https://github.com/IbrahimShahzad/KamaiZen) for Kamailio configuration files.
 
