@@ -1,6 +1,6 @@
 # kamaizen-nvim
 
-Neovim plugin to integrate the [KamaiZen Language Server](https://github.com/IbrahimShahzad/KamaiZen) for Kamailio configuration files.
+Neovim plugin to integrate the [KamaiZen Language Server](https://github.com/IbrahimShahzad/KamaiZen) and tree-sitter grammar for Kamailio configuration files.
 
 ## Installation
 
