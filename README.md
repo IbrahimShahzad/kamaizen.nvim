@@ -4,13 +4,10 @@ Neovim plugin to integrate the [KamaiZen Language Server](https://github.com/Ibr
 
 ## Installation
 
-### Basic Installation (recommended)
-
-    with [lazy.nvim](https://github.com/folke/lazy.nvim):
-
+with [lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
     {
-      'batoaqaa/kamaizen.nvim', -- replace this with your {user_name}/{repo_name}
+      'batoaqaa/kamaizen.nvim' -- replace this with your {user_name}/{repo_name}
       dependencies = {
         { 'IbrahimShahzad/KamaiZen', build = 'go build' },
       },
