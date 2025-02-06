@@ -55,8 +55,9 @@ M.setup = function(opts)
         end)()
       end
       ----------------------------------------
-      local id = vim.lsp.start(opts) --config.server_opts)
+      local id = vim.lsp.start(opts)
       if not id then
+        vim.notify('Failed to start LSP client', vim.log.levels.ERROR)
         return
       end
     end,
