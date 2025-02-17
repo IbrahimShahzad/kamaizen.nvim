@@ -31,8 +31,8 @@ with [lazy.nvim](https://github.com/folke/lazy.nvim):
         settings = {
           kamaizen = {
             enableDeprecatedCommentHint = false, -- to enable hints for '#' comments
-            -- update path to a kamailio source folder if the config is in a different
-            -- directory
+            -- update path to a kamailio source folder if the config is
+            -- in a different directory
             KamailioSourcePath = vim.fn.getcwd(),
             loglevel = 3,
           },
