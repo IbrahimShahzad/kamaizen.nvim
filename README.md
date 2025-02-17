@@ -4,12 +4,28 @@ Neovim plugin to integrate the [KamaiZen Language Server](https://github.com/Ibr
 
 ## Installation
 
+> [!IMPORTANT]  
+> Make sure to have golang installed on the system
+ 
 with [lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
     {
       'IbrahimShahzad/kamaizen.nvim',
       dependencies = {
-        { 'IbrahimShahzad/KamaiZen', build = 'go build' },
+        {
+            'IbrahimShahzad/KamaiZen',
+            build = = function()
+                if vim.fn.executable("go") == 0 then
+                    vim.notify("Golang is required to build KamaiZen. Please install Golang.", vim.log.levels.ERROR)
+                    return
+                end
+                vim.fn.system("go build -o KamaiZen")
+            end,
+            -- Optionally, only load if Go is installed
+            cond = function()
+                return vim.fn.executable("go") == 1
+            end,
+        },
       },
       opts = {
         settings = {
